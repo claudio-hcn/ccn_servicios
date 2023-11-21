@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contenedor {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 1,5fr auto 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "header header header"
+      "main main main"
+      "footer footer footer"; 
+    width: 50%; 
+    height: 50%; 
+  }
+  .header { grid-area: header; }
+  .body { grid-area: main; }
+  .footer { grid-area: footer;
+  }
+  
+  .header { grid-area: header;
+    height: 150px;
+    width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 5px solid black;
+    background-color: yellowgreen;
+    
+    padding: 10px;
+
+}
+
+.header h2{
+  font-family: 'Mooli', sans-serif;
+  font-weight: 1000;
+  color: whitesmoke;
+  text-shadow: 0.1em 0.1em 0.05em #333
+}
+
+.boton-menu{
+  display: none;
+
+}
+
+.links-header{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: end;
+    margin-right: 10px;
+    color: black;
+    list-style: none; /*quita el punto ql del enlace*/
+    font-family: 'Lato', sans-serif;
+}
+
+.enlace-header{
+    text-align: center;
+    color: black;
+}
+
+.enlace-header:hover{
+    font-size: 20px;
+    background-color: yellow;
+}
+
+.div-principal{
+  width: 100vw;
+  display: flex;
+  background-color: grey;
+}
+
+.div-principal div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  
+
+}
+
+.div-principal div h1{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-weight: 900; 
+}
+
+.div-principal div h5{
+  text-align: left;
+  font-weight: 700;
+  font-family: 'Comic Neue'; 
+}
+
+.div-principal div img{
+  width:40vw;
+}
+
+.body { grid-area: body;
+  height: 100px;
+}
+
+.main{
+  /* background: linear-gradient(rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0.505)), url(../img/Termografia/termografia_mediatension.jpg); */
+}
+
+
+.img-carrusel{
+  width: 100vw;
+  height: calc(100vh - 200px);;
+}
+  .footer { grid-area: footer; 
+  background-color: yellowgreen;
+  width: 100vw;
+  }
+  
+
+
+
+  
+@media (max-width:1150px){
+
+    .header h1{
+     text-align: left;
+    }
+    .links-header{
+        flex-direction: column;
+        justify-content: end;
+        width: 80vw;
+        margin-top: 10px;
+        gap: 5px;
+        
+    }
+.img-carrusel{
+  height: 50vh ;
+}
+
+}
+@media (max-width: 700px){
+  .img-carrusel{
+    height: 35vh ;
+  }
+  .div-principal{
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .div-principal div img{
+    width: 80vw;
+  }
+}
+
+
+@media (max-width: 500px){
+.header{
+  flex-direction: column;
+}
+
+.links-header{
+  display:none
+}
+
+.boton-menu{
+  display: inline;
+}
+
+.img-carrusel{
+  height: 25vh ;
+}
+}
+
+
+/*!CONECTORES*/
+
+.img-tarjeta{
+  height: 250px;
+}
+
+
+.contenedor-tarjetas {  
+  display: grid;
+  grid-template-columns: repeat(3, 288px);
+  grid-template-rows: repeat(2, 466px);
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "c1 c2 c3"
+    "c4 c5 c6";
+  width: 100vw;
+  height: 50%;
+  gap:20px;
+  justify-content: center;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 900;
+  
+}
+
+.card{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.63);
+}
+
+.btn{
+  -webkit-box-shadow: 7px 11px 5px -1px rgba(0,0,0,0.45);
+-moz-box-shadow: 7px 11px 5px -1px rgba(0,0,0,0.45);
+box-shadow: 7px 11px 5px -1px rgba(0,0,0,0.45);
+
+}
+
+.c1 { 
+  grid-area: c1; 
+
+
+}
+
+.c2 { grid-area: c2; }
+
+.c3 { grid-area: c3; }
+
+.c4 { grid-area: c4; }
+
+.c5 { grid-area: c5; }
+
+.c6 { grid-area: c6; }
+
+@media (max-width: 900px){
+  .contenedor-tarjetas {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "c1 c2"
+      "c3 c4"
+      "c5 c6"; 
+    width: 100vw; 
+    height: 50%;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  
+
+}
+
+@media (max-width: 600px){
+.contenedor-tarjetas{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+
+}
+}
