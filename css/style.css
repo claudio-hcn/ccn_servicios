@@ -119,7 +119,36 @@
   }
   
 
+/* *ULTRASONIDO */
 
+.ultrasonido{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.ultrasonido-wtf{
+  display: flex;
+  flex-direction: row;
+}
+
+.ultrasonido-wtf img{
+  width: 25vw
+}
+
+.ultra-tipos{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card-us{
+  height: 400px;
+}
+
+.card-us img{
+  height: 200px;
+}
 
   
 @media (max-width:1150px){
