@@ -119,36 +119,7 @@
   }
   
 
-/* *ULTRASONIDO */
 
-.ultrasonido{
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.ultrasonido-wtf{
-  display: flex;
-  flex-direction: row;
-}
-
-.ultrasonido-wtf img{
-  width: 25vw
-}
-
-.ultra-tipos{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.card-us{
-  height: 400px;
-}
-
-.card-us img{
-  height: 200px;
-}
 
   
 @media (max-width:1150px){
@@ -167,6 +138,7 @@
 .img-carrusel{
   height: 50vh ;
 }
+
 
 }
 @media (max-width: 700px){
@@ -287,4 +259,92 @@ box-shadow: 7px 11px 5px -1px rgba(0,0,0,0.45);
   align-items: center;
 
 }
+}
+/* *ULTRASONIDO */
+
+.ultrasonido{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.ultrasonido-wtf{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+.ultrasonido-wtf img{
+  width: 500px;
+  height: 300px;
+  padding: 10px;
+}
+
+.ultrasonido h1{
+  text-align: center;
+}
+
+.ultrasonido-wtf p{
+  padding: 10px;
+  width: 40vw
+}
+
+.ultra-tipos{
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: repeat(6, 180px); 
+  grid-template-rows: repeat(3, 450px); 
+  /* gap: 10px 10px;  */
+  grid-template-areas: 
+    ". elec elec fuga fuga ."
+    ". valv valv trap trap ."
+    ". . mec mec . ."; 
+  width: 100vw; 
+  height: 50%; 
+  justify-content: center;
+}
+.mec { grid-area: mec; }
+.trap { grid-area: trap; }
+.valv { grid-area: valv; }
+.elec { grid-area: elec; }
+.fuga { grid-area: fuga; }
+  
+
+
+.card-us{
+  height: 388px;
+}
+
+.card-us img{
+  height: 200px;
+}
+
+@media (max-width:1150px){
+.ultrasonido-wtf{
+  flex-direction: column;
+  align-items: center;
+}
+
+.ultrasonido-wtf p{
+  width: 80vw;
+}
+.ultrasonido-wtf img{
+  width: 60vw;
+}
+
+}
+
+@media (max-width: 730px){
+  .ultra-tipos{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .ultrasonido-wtf img{
+    width: 90vw;
+  }
 }
