@@ -74,6 +74,7 @@
   background-color: yellow;
 }
 
+
 /* ? PAGINA INICIO */
 
 .div-principal,
@@ -113,6 +114,13 @@
   grid-area: footer;
   background-color: yellowgreen;
   width: 100vw;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+}
+
+.footer p{
+  margin: 0 0 5px;
 }
 
 @media (max-width: 1150px) {
@@ -150,6 +158,7 @@
   }
 
   .div-principal div h3, .div-principal1 div h3{
+  padding: 20px;
   text-align: center;
   }
 }
@@ -166,18 +175,28 @@
   .boton-menu {
     display: inline;
   }
+
+ .footer{
+  flex-direction: column;
+ }
 }
 
 /* *TERMOGRAFÍA*/
 
 .termo-wtf {
-  width: 700px;
+  width: 500px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .main-termo {
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: grey;
 }
 
@@ -321,7 +340,7 @@
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(6, 180px);
-  grid-template-rows: repeat(3, 450px);
+  grid-template-rows: repeat(3, 500px);
   /* gap: 10px 10px;  */
   grid-template-areas:
     ". elec elec fuga fuga ."
@@ -348,7 +367,8 @@
 }
 
 .card-us {
-  height: 388px;
+  height: 450px;
+  border-radius: 50px;
 }
 
 .card-us img {
@@ -380,4 +400,62 @@
   .ultrasonido-wtf img {
     width: 90vw;
   }
+
+}
+
+
+.fixed-contactos{
+
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: right;
+
+}
+
+.contenedor-footer {
+  border: solid 5px rgb(65, 25, 94);
+  font-family: 'Lato', sans-serif;
+  color: black;
+  background: greenyellow;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 10px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.footer-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap:2px;
+}
+
+footer img{
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+
+}
+
+@media (max-width:900px){
+  .fixed-contactos{
+    right: 0;
+  }
+  .contenedor-footer{
+    height: 170px;
+  }
+  .fixed-contactos h5{
+    display: none;
+    
+    }
+    .footer-links{
+      display: flex;
+      flex-direction: column;
+    }
 }
