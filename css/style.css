@@ -184,7 +184,7 @@
 /* *TERMOGRAFÍA*/
 
 .termo-wtf {
-  width: 500px;
+  width: 300px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -215,6 +215,32 @@
 .img-carrusel {
   height: 300px;
   width: 400px;
+}
+
+@media (max-width:1000px){
+  .main-termo{
+   flex-direction: column;
+   align-items: center;
+  }
+
+  .contenedor-carrusel{
+    width: 610px;
+  }
+  .img-carrusel{
+    height: 200px;
+    width: 300px;
+  }
+}
+
+@media (max-width:700px){
+
+  .contenedor-carrusel{
+    flex-direction: column;
+    height: 410px;
+    width: 300px ;
+    align-items: center;
+  }
+
 }
 
 /*!CONECTORES*/
