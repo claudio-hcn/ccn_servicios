@@ -222,10 +222,42 @@
   width: 400px;
 }
 
+.termo-tipos {  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.25fr 1fr 0.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: 1fr;
+  gap: 30px;
+  grid-auto-flow: row;
+  justify-items: stretch;
+  grid-template-areas:
+    ". soltura . subdim ."
+    ". mec . valvulas .";
+  width: 100vw;
+  height: 50%;
+}
+
+.soltura { grid-area: soltura;
+  
+}
+
+.subdim { grid-area: subdim; }
+
+.mec { grid-area: mec; }
+
+.valvulas { grid-area: valvulas; }
+
+.tarjeta-termo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
 .contenedor-termo2{
   padding-top: 20px;
  text-align: center;
 }
+
+
 
 @media (max-width:1200px){
   .termo-wtf{
@@ -257,6 +289,10 @@
     height: 200px;
     width: 300px;
   }
+ .termo-tipos{
+  display: flex;
+  flex-direction: column;
+ }
 }
 
 /*!CONECTORES*/
@@ -410,12 +446,18 @@
 
 .card-us {
   height: 450px;
-  border-radius: 50px;
 }
 
 .card-us img {
   height: 200px;
 }
+
+.tarjeta-ultra{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
 
 @media (max-width: 1150px) {
   .ultrasonido-wtf {
